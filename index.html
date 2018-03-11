@@ -4,61 +4,74 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
       <script src="calc.js"></script>
     <title>Kalkulator</title>
   </head>
   <body>
-      <div class="container">
-    <h1>Hello, world!</h1>
-          <div class="kalkulator">
-            <div class="okno">
-                <div class="card">
-  <div class="card-body" id="wynik">
-    Tutaj pojawi się wynik.     
-  </div>
-</div><br/>
-                <div class="input-group mb-3">
-  <input id="obliczenia" type="text" class="form-control" placeholder="Wpisz działanie" aria-label="Wpisz działanie" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-    <button id="obliczbutton" class="btn btn-outline-secondary" type="button">Oblicz</button>
-  </div>
-</div>  
-            </div>
-              <div class="klawiatura">
-              <div class="btn-toolbar btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group mr-2 col-lg-4" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-      </div>
-  <div class="btn-group mr-2 col-lg-4" role="group" aria-label="Second group">
-      <button type="button" class="btn btn-secondary">4</button>
-    <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
-  </div>
-  <div class="btn-group col-lg-4" role="group" aria-label="Third group">
-    <button type="button" class="btn btn-secondary">7</button>
-      <button type="button" class="btn btn-secondary">8</button>
-      <button type="button" class="btn btn-secondary">9</button>
-  </div>
-  <div class="btn-group col-lg-4" role="group" aria-label="Fourth group">
-    <button type="button" class="btn btn-secondary">.</button>
-      <button type="button" class="btn btn-secondary">0</button>
-      <button type="button" class="btn btn-secondary">,</button>
-  </div>
-</div>
-              </div>
-          </div>
-          
-          
-</div>
+    <div class="container">
+			<h1>Kalkulator</h1>
+       <div class="kalkulator">
+         <div class="okno">
+           <div class="card">
+						<div class="card-body" id="wynik">
+							Tutaj pojawi się wynik.     
+						</div>
+					</div><br/>
+           <div class="input-group mb-3">
+						<input id="obliczenia" type="text" class="form-control" placeholder="Obliczenia" aria-label="Obliczenia" aria-describedby="basic-addon2"><!--
+						<div class="input-group-append">
+							<button id="obliczbutton" class="btn btn-outline-secondary" type="button">Oblicz</button>
+						</div>-->
+					</div>  
+				</div>
+
+        <div class="klawiatura">
+          <div class="btn-toolbar btn-group-vertical" role="toolbar" aria-label="Toolbar with button groups">
+						<div class="btn-group mr-2 col-lg-4" role="group" aria-label="First group">
+							<button id="klawisz1" type="button" class="btn btn-secondary" onClick="klawisz('1')">1</button>
+							<button id="klawisz2" type="button" class="btn btn-secondary" onClick="klawisz('2')">2</button>
+							<button id="klawisz3" type="button" class="btn btn-secondary" onClick="klawisz('3')">3</button>
+						</div>
+
+						<div class="btn-group mr-2 col-lg-4" role="group" aria-label="Second group">
+							<button id="klawisz4" type="button" class="btn btn-secondary" onClick="klawisz('4')">4</button>
+							<button id="klawisz5" type="button" class="btn btn-secondary" onClick="klawisz('5')">5</button>
+							<button id="klawisz6" type="button" class="btn btn-secondary" onClick="klawisz('6')">6</button>
+						</div>
+
+						<div class="btn-group col-lg-4" role="group" aria-label="Third group">
+							<button id="klawisz7" type="button" class="btn btn-secondary" onClick="klawisz('7')">7</button>
+							<button id="klawisz8" type="button" class="btn btn-secondary" onClick="klawisz('8')">8</button>
+							<button id="klawisz9" type="button" class="btn btn-secondary" onClick="klawisz('9')">9</button>
+						</div>
+  
+						<div class="btn-group col-lg-4" role="group" aria-label="Fourth group">
+							<button type="button" class="btn btn-secondary" onClick="klawisz('.')">.</button>
+							<button id="klawisz0" type="button" class="btn btn-secondary" onClick="klawisz('0')">0</button>
+							<button id="klawiszPrzec"type="button" class="btn btn-secondary" onClick="klawisz('SQRT()')">\/^</button>
+						</div>
+  
+						<div class="btn-group col-lg-4" role="group" aria-label="Five group">
+							<button id="klawiszPlus"  type="button" class="btn btn-secondary" onClick="klawisz('+')">+</button>
+							<button id="klawiszMinus" type="button" class="btn btn-secondary" onClick="klawisz('-')">-</button>
+							<button id="klawiszPotega" type="button" class="btn btn-secondary" onClick="klawisz('**')">**</button>
+						</div>
+
+						<div class="btn-group col-lg-4" role="group" aria-label="six group">
+							<button id="klawiszClear" type="button" class="btn btn-secondary" onClick="czysc()">C</button>
+							<button id="klawiszMnozenie"  type="button" class="btn btn-secondary" onClick="klawisz('*')">*</button>
+							<button id="klawiszDzielenie" type="button" class="btn btn-secondary" onClick="klawisz('/')">/</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
